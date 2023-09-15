@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="acart"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-14 01:57:56 PM"/>
+        <attribute name="created" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTA5LTE0OzAxOjA1OjU5IFBNOzI2MTA="/>
+        <attribute name="edited" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTA5LTE0OzAxOjU3OjU2IFBNOzI7MjcyMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="FixedCosts" type="Real" array="False" size=""/>
+            <declare name="UnitPrice" type="Real" array="False" size=""/>
+            <declare name="UnitCost" type="Real" array="False" size=""/>
+            <declare name="BreakEven" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter the fixed cost.&quot;" newline="True"/>
+            <input variable="FixedCosts"/>
+            <output expression="&quot;Please enter the price per unit.&quot;" newline="True"/>
+            <input variable="UnitPrice"/>
+            <output expression="&quot;Please enter the cost per unit.&quot;" newline="True"/>
+            <input variable="UnitCost"/>
+            <assign variable="BreakEven" expression="FixedCosts / (UnitPrice - UnitCost)"/>
+            <output expression="&quot;The break even point for your business is $&quot; &amp; BreakEven &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

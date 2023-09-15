@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="acart"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-14 12:43:46 PM"/>
+        <attribute name="created" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTA5LTE0OzEyOjI3OjU3IFBNOzI2MTQ="/>
+        <attribute name="edited" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTA5LTE0OzEyOjQzOjQ2IFBNOzE7MjcxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="PriceShare" type="Real" array="False" size=""/>
+            <declare name="StockPrice" type="Real" array="False" size=""/>
+            <declare name="QuantStock" type="Real" array="False" size=""/>
+            <declare name="StockValue" type="Real" array="False" size=""/>
+            <output expression="&quot;Please input the purchase price per share.&quot;" newline="True"/>
+            <input variable="PriceShare"/>
+            <output expression="&quot;Please input the current stock price.&quot;" newline="True"/>
+            <input variable="StockPrice"/>
+            <output expression="&quot;Please input the quantity of stock.&quot;" newline="True"/>
+            <input variable="QuantStock"/>
+            <assign variable="StockValue" expression="(StockPrice - PriceShare) * QuantStock"/>
+            <if expression="StockValue &gt;= 0">
+                <then>
+                    <output expression="&quot;The current stock value is $&quot; &amp; StockValue &amp; &quot;. You are gaining money.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;The current stock value is $&quot; &amp; StockValue &amp; &quot;. You are losing money.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

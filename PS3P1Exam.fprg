@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="acart"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-14 12:27:55 PM"/>
+        <attribute name="created" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTA5LTE0OzEyOjE3OjU3IFBNOzI2MTM="/>
+        <attribute name="edited" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTA5LTE0OzEyOjI3OjU1IFBNOzE7MjcyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ExamOne" type="Real" array="False" size=""/>
+            <declare name="ExamTwo" type="Real" array="False" size=""/>
+            <declare name="ScoreOne" type="Real" array="False" size=""/>
+            <declare name="ScoreTwo" type="Real" array="False" size=""/>
+            <declare name="TotalScore" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter your first exam score.&quot;" newline="True"/>
+            <input variable="ExamOne"/>
+            <output expression="&quot;Please enter your second exam score.&quot;" newline="True"/>
+            <input variable="ExamTwo"/>
+            <assign variable="ScoreOne" expression="ExamOne * .60"/>
+            <assign variable="ScoreTwo" expression="ExamTwo * .40"/>
+            <assign variable="TotalScore" expression="ScoreOne + ScoreTwo"/>
+            <output expression="&quot;Your total score is &quot; &amp; TotalScore &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
