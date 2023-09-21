@@ -1,0 +1,18 @@
+#input
+
+Item = input("Item A or B?")
+ItemQty = float(input("How many of that item?"))
+
+#processing
+
+if Item == "A":
+  UnitPrice = 10.00
+else:
+  UnitPrice = 20.00
+
+
+ExtPrice = (UnitPrice * ItemQty)
+
+#output
+
+print("For ", ItemQty, " of item ", Item, ", the unit price is $", UnitPrice, " and the extended price is $", ExtPrice, ".")

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="acart"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 06:14:57 PM"/>
+        <attribute name="created" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTA5LTIwOzA2OjA4OjM1IFBNOzI2MDk="/>
+        <attribute name="edited" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTA5LTIwOzA2OjE0OjU3IFBNOzE7MjcxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Item" type="String" array="False" size=""/>
+            <declare name="ItemQty" type="Real" array="False" size=""/>
+            <declare name="ExtPrice" type="Real" array="False" size=""/>
+            <declare name="UnitPrice" type="Real" array="False" size=""/>
+            <output expression="&quot;Item A or B?&quot;" newline="True"/>
+            <input variable="Item"/>
+            <output expression="&quot;How many of that item?&quot;" newline="True"/>
+            <input variable="ItemQty"/>
+            <if expression="Item = &quot;A&quot;">
+                <then>
+                    <assign variable="UnitPrice" expression="10.00"/>
+                </then>
+                <else>
+                    <assign variable="UnitPrice" expression="20.00"/>
+                </else>
+            </if>
+            <assign variable="ExtPrice" expression="UnitPrice * ItemQty"/>
+            <output expression="&quot;For &quot; &amp; ItemQty &amp; &quot; of item &quot; &amp; Item &amp; &quot;, the unit price is $&quot; &amp; UnitPrice &amp; &quot; and the extended price is $&quot; &amp; ExtPrice &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
