@@ -1,0 +1,23 @@
+#input
+
+PartNumber = float(input("Enter the part number."))
+Quantity = float(input("What is the quantity?"))
+
+#process
+
+if PartNumber == 10 or PartNumber == 55:
+  UnitCost = 1.0
+else:
+  if PartNumber == 99:
+    UnitCost = 2.0
+  else:
+    if PartNumber == 80 or PartNumber == 70:
+      UnitCost = 3.0
+    else:
+      UnitCost = 5.0
+
+TotalCost = UnitCost * Quantity
+
+#output
+
+print("The part number is ", PartNumber, " and the quantity is", Quantity, ". The total cost is $", TotalCost, ".")

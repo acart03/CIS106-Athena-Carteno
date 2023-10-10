@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="acart"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-08 10:33:02 PM"/>
+        <attribute name="created" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTEwLTA4OzEwOjI0OjM3IFBNOzI2MDI="/>
+        <attribute name="edited" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTEwLTA4OzEwOjMzOjAyIFBNOzE7MjcwMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="WidgetQty" type="Real" array="False" size=""/>
+            <declare name="Price" type="Integer" array="False" size=""/>
+            <declare name="ExtPrice" type="Real" array="False" size=""/>
+            <declare name="TaxAmount" type="Real" array="False" size=""/>
+            <declare name="Total" type="Real" array="False" size=""/>
+            <output expression="&quot;Input the quantity of widgets.&quot;" newline="True"/>
+            <input variable="WidgetQty"/>
+            <if expression="WidgetQty &gt; 10000">
+                <then>
+                    <assign variable="Price" expression="10"/>
+                </then>
+                <else>
+                    <if expression="WidgetQty &gt; 5000">
+                        <then>
+                            <assign variable="Price" expression="20"/>
+                        </then>
+                        <else>
+                            <assign variable="Price" expression="30"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="ExtPrice" expression="WidgetQty * Price"/>
+            <assign variable="TaxAmount" expression="ExtPrice * .07"/>
+            <assign variable="Total" expression="TaxAmount + ExtPrice"/>
+            <output expression="&quot;The extended price is $&quot; &amp; ExtPrice &amp; &quot;. The tax amount is $&quot; &amp; TaxAmount &amp; &quot;. The total is $&quot; &amp; Total &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
