@@ -1,0 +1,12 @@
+Computer
+2
+1000
+Charger
+10
+25
+Keyboard
+8
+45
+Speaker
+3
+100
