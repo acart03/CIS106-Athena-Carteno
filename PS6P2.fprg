@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="acart"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-16 11:06:28 PM"/>
+        <attribute name="created" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTEwLTE2OzExOjAwOjEzIFBNOzI1OTA="/>
+        <attribute name="edited" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTEwLTE2OzExOjA2OjI4IFBNOzE7MjcxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="StartValue" type="Real" array="False" size=""/>
+            <declare name="StopValue" type="Real" array="False" size=""/>
+            <declare name="IncrementValue" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter a start value.&quot;" newline="True"/>
+            <input variable="StartValue"/>
+            <output expression="&quot;Enter a stop value.&quot;" newline="True"/>
+            <input variable="StopValue"/>
+            <output expression="&quot;Enter the increment value.&quot;" newline="True"/>
+            <input variable="IncrementValue"/>
+            <while expression="StartValue &lt;= StopValue">
+                <output expression="&quot;Displaying the inputed start to stop values with the increment given: &quot; &amp; StartValue" newline="True"/>
+                <assign variable="StartValue" expression="StartValue + IncrementValue"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="acart"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-16 10:59:56 PM"/>
+        <attribute name="created" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTEwLTE2OzEwOjE2OjUzIFBNOzI2MDA="/>
+        <attribute name="edited" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTEwLTE2OzEwOjU5OjU2IFBNOzM7MjcyMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="StartValue" type="Integer" array="False" size=""/>
+            <declare name="StopValue" type="Integer" array="False" size=""/>
+            <declare name="IncrementValue" type="Integer" array="False" size=""/>
+            <assign variable="StartValue" expression="1"/>
+            <assign variable="StopValue" expression="25"/>
+            <assign variable="IncrementValue" expression="2"/>
+            <while expression="StartValue &lt;= StopValue">
+                <output expression="&quot;Displaying odd numbers 1-25: &quot; &amp; StartValue" newline="True"/>
+                <assign variable="StartValue" expression="StartValue + IncrementValue"/>
+                <comment text="Defining an Increment Value is not necessary in this case. Instead of &quot;IncrementValue&quot;, a &quot;+ 2&quot; would be enough to satisfy this problem. However, due to personal preferences, a defined variable is used."/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

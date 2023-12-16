@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="perez"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-15 08:59:07 PM"/>
+        <attribute name="created" value="cGVyZXo7TFBSRVo7MjAyMy0xMS0yODswNTowNjo1NCBQTTsyMjMw"/>
+        <attribute name="edited" value="cGVyZXo7TFBSRVo7MjAyMy0xMS0yODsxMDozMDozNiBQTTsxOzIzMzE="/>
+        <attribute name="edited" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTEyLTE1OzA4OjU5OjA3IFBNOzE7MjcyMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="PromptValue" type="String" array="False" size=""/>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="ScoreAverage" type="Real" array="False" size=""/>
+            <declare name="ScoreOne" type="Real" array="False" size=""/>
+            <declare name="ScoreTwo" type="Real" array="False" size=""/>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <assign variable="counter" expression="0"/>
+            <output expression="&quot;Would you like to run the program?&quot;" newline="True"/>
+            <input variable="PromptValue"/>
+            <while expression="PromptValue == &quot;Yes&quot; || PromptValue == &quot;yes&quot; || PromptValue == &quot;y&quot; || PromptValue == &quot;Y&quot; || PromptValue == &quot;YES&quot;">
+                <assign variable="counter" expression="counter + 1"/>
+                <output expression="&quot;Input your last name.&quot;" newline="True"/>
+                <input variable="LastName"/>
+                <output expression="&quot;Input your first exam score.&quot;" newline="True"/>
+                <input variable="ScoreOne"/>
+                <output expression="&quot;Input your second exam score.&quot;" newline="True"/>
+                <input variable="ScoreTwo"/>
+                <assign variable="ScoreAverage" expression="(ScoreOne + ScoreTwo)/2"/>
+                <output expression="&quot;Miss/Mister &quot; &amp; LastName &amp; &quot;, your score average is &quot; &amp; ScoreAverage &amp; &quot;.&quot;" newline="True"/>
+                <output expression="&quot;Do you want to run the program again?&quot;" newline="True"/>
+                <input variable="PromptValue"/>
+            </while>
+            <output expression="&quot;The number of students who have run this program is &quot; &amp; counter" newline="True"/>
+            <output expression="&quot;This is the end of the program.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

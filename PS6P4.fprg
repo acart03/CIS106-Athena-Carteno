@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="perez"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-12-15 09:12:14 PM"/>
+        <attribute name="created" value="cGVyZXo7TFBSRVo7MjAyMy0xMS0yODsxMDozMDo0NCBQTTsyMjIy"/>
+        <attribute name="edited" value="cGVyZXo7TFBSRVo7MjAyMy0xMS0yOTswNDo1Mjo1NCBBTTszOzIzMjY="/>
+        <attribute name="edited" value="YWNhcnQ7TEFQUFlUT1BQWTsyMDIzLTEyLTE1OzA5OjEyOjE0IFBNOzE7MjcxMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="PromptValue" type="String" array="False" size=""/>
+            <declare name="LastName" type="String" array="False" size=""/>
+            <declare name="TotalHours" type="Integer" array="False" size=""/>
+            <declare name="PayRate" type="Real" array="False" size=""/>
+            <declare name="GrossPay" type="Real" array="False" size=""/>
+            <declare name="AvgGross" type="Real" array="False" size=""/>
+            <declare name="SumGross" type="Real" array="False" size=""/>
+            <assign variable="SumGross" expression="0.0"/>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <assign variable="counter" expression="0"/>
+            <output expression="&quot;Do you want to compute your gross pay?&quot;" newline="True"/>
+            <input variable="PromptValue"/>
+            <while expression="PromptValue == &quot;Yes&quot; || PromptValue == &quot;yes&quot; || PromptValue == &quot;y&quot; || PromptValue == &quot;Y&quot; || PromptValue == &quot;YES&quot;">
+                <assign variable="counter" expression="counter + 1"/>
+                <output expression="&quot;Please input your last name.&quot;" newline="True"/>
+                <input variable="LastName"/>
+                <output expression="&quot;Please enter the total hours worked.&quot;" newline="True"/>
+                <input variable="TotalHours"/>
+                <output expression="&quot;Please enter your pay rate.&quot;" newline="True"/>
+                <input variable="PayRate"/>
+                <if expression="TotalHours &gt;= 40">
+                    <then>
+                        <assign variable="GrossPay" expression="(40 * PayRate) + (TotalHours - 40) * 1.5 * PayRate"/>
+                    </then>
+                    <else>
+                        <assign variable="Grosspay" expression="PayRate * TotalHours"/>
+                    </else>
+                </if>
+                <output expression="&quot;Miss/Mister &quot; &amp; LastName &amp; &quot;, your gross pay is: $&quot; &amp; GrossPay" newline="True"/>
+                <assign variable="SumGross" expression="SumGross + GrossPay"/>
+                <output expression="&quot;Would you like to compute your gross pay?&quot;" newline="True"/>
+                <input variable="PromptValue"/>
+            </while>
+            <assign variable="AvgGross" expression="SumGross/counter"/>
+            <output expression="&quot;The sum of your pay roll is: $&quot; &amp; SumGross" newline="True"/>
+            <output expression="&quot;Number of employees: &quot; &amp; counter" newline="True"/>
+            <output expression="&quot;The average gross pay is: $&quot; &amp; AvgGross" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
